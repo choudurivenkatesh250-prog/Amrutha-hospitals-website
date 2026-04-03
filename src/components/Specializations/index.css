@@ -1,0 +1,47 @@
+.specializations-content {
+  padding: 24px;
+}
+
+.specializations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.specialization-card {
+  padding: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  background: var(--brand-beige);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.specialization-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.spec-icon {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.spec-title {
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.spec-description {
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .specializations-grid {
+    grid-template-columns: 1fr;
+  }
+}

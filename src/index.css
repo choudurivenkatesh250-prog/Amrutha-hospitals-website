@@ -1,0 +1,130 @@
+/* src/index.css */
+:root {
+  --brand-green: #3A643B;
+  --brand-light-green: #EAF2EA;
+  --brand-beige: #FFF7E2;
+  --text-dark: #333333;
+  --text-muted: #666666;
+  --border-color: #E5E7EB;
+  --gray-100: #F3F4F6;
+  --gray-200: #E5E7EB;
+  --gray-500: #6B7280;
+  --amrutam-green: #3A643B;
+  --amrutam-light-green: #EAF2EA;
+  --amrutam-cream: #FFF7E2;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #F9FAFB;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+@media (max-width: 768px) {
+  .grid-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Common Card Style used across multiple components */
+.global-card {
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.right-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Responsive improvements */
+@media (max-width: 1024px) {
+  .container {
+    padding: 16px;
+  }
+  
+  .navbar {
+    padding: 12px 20px;
+    flex-wrap: wrap;
+  }
+  
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    margin-top: 12px;
+  }
+  
+  .nav-actions {
+    order: 2;
+  }
+  
+  .logo {
+    order: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .profile-content {
+    padding: 0 16px 24px 16px;
+  }
+  
+  .profile-stats {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .hero-search {
+    padding: 2rem 1rem;
+  }
+  
+  .hero-search h1 {
+    font-size: 1.5rem;
+  }
+  
+  .search-inputs {
+    flex-direction: column;
+    max-width: 100%;
+  }
+  
+  .input-group.location,
+  .input-group.query {
+    width: 100%;
+  }
+  
+  .specializations-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,49 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  background-color: var(--brand-beige);
+  border-bottom: 1px solid var(--border-color);
+}
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--brand-green);
+  letter-spacing: 2px;
+}
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+.nav-links a.active {
+  color: var(--brand-green);
+  font-weight: 600;
+}
+.nav-actions {
+  display: flex;
+  gap: 12px;
+}
+.btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+}
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--brand-green);
+  color: var(--brand-green);
+}
+.btn-solid {
+  background: var(--brand-green);
+  color: white;
+}
+.btn-solid:hover { background: #2c4c2d; }
