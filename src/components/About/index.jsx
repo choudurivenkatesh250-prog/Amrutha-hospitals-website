@@ -6,56 +6,55 @@ const About = () => {
     <div className="about-page">
       <div className="global-card">
         <div className="about-content">
-          <h1 className="about-title">About Amrutam</h1>
+          <h1 className="about-title">About Amrutam Hospital</h1>
+          
           <div className="about-section">
             <h2>Our Mission</h2>
             <p>
-              Amrutam is dedicated to providing accessible, quality healthcare through technology. 
-              We connect patients with expert doctors across various specializations, making 
-              healthcare convenient and affordable for everyone.
+              Amrutam Hospital is dedicated to providing exceptional healthcare services 
+              with compassion and excellence. We strive to make quality medical care 
+              accessible to everyone in our community.
             </p>
           </div>
           
           <div className="about-section">
             <h2>Our Vision</h2>
             <p>
-              To become India's most trusted healthcare platform by bridging the gap between 
-              patients and healthcare providers through innovative technology and compassionate care.
+              To be the leading healthcare provider known for our commitment to 
+              patient-centered care, medical innovation, and community wellness.
             </p>
           </div>
           
-          <div className="about-features">
-            <div className="feature-card">
-              <div className="feature-icon">👥</div>
-              <h3>500+ Expert Doctors</h3>
-              <p>Experienced specialists across multiple medical fields</p>
-            </div>
-            <div className="feature-card">
-              <div className="feature-icon">🏥</div>
-              <h3>24/7 Availability</h3>
-              <p>Round-the-clock medical consultation and support</p>
-            </div>
-            <div className="feature-card">
-              <div className="feature-icon">💊</div>
-              <h3>Affordable Care</h3>
-              <p>Competitive pricing for quality healthcare services</p>
-            </div>
-            <div className="feature-card">
-              <div className="feature-icon">🔒</div>
-              <h3>Secure & Private</h3>
-              <p>Your health information is always protected</p>
+          <div className="about-section">
+            <h2>Our Values</h2>
+            <div className="values-grid">
+              <div className="value-item">
+                <h3>Compassion</h3>
+                <p>We treat every patient with empathy and kindness</p>
+              </div>
+              <div className="value-item">
+                <h3>Excellence</h3>
+                <p>We maintain the highest standards in medical care</p>
+              </div>
+              <div className="value-item">
+                <h3>Integrity</h3>
+                <p>We operate with transparency and honesty</p>
+              </div>
+              <div className="value-item">
+                <h3>Innovation</h3>
+                <p>We embrace modern medical technologies and treatments</p>
+              </div>
             </div>
           </div>
           
           <div className="about-section">
-            <h2>Why Choose Amrutam?</h2>
-            <ul>
-              <li>Easy appointment booking with just a few clicks</li>
-              <li>Video, chat, and in-clinic consultation options</li>
-              <li>Verified and experienced medical professionals</li>
-              <li>Personalized healthcare recommendations</li>
-              <li>Comprehensive health records management</li>
-            </ul>
+            <h2>Contact Information</h2>
+            <div className="contact-info">
+              <p><strong>Address:</strong> 123 Healthcare Avenue, Medical District, City - 500001</p>
+              <p><strong>Phone:</strong> +91 98765 43210</p>
+              <p><strong>Email:</strong> info@amrutamhospital.com</p>
+              <p><strong>Emergency:</strong> 24/7 Emergency Services Available</p>
+            </div>
           </div>
         </div>
       </div>

@@ -28,6 +28,12 @@
 .nav-actions {
   display: flex;
   gap: 12px;
+  align-items: center;
+}
+.welcome-text {
+  color: var(--brand-green);
+  font-weight: 600;
+  font-size: 14px;
 }
 .btn {
   padding: 10px 20px;

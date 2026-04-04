@@ -1,9 +1,508 @@
-.profile-container {
+/* No Doctor Selected State */
+.no-doctor-selected {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 12px;
+  border: 2px dashed var(--gray-200);
+}
+
+.no-doctor-selected h3 {
+  color: var(--text-dark);
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.no-doctor-selected p {
+  color: var(--gray-500);
+  font-size: 16px;
+}
+
+/* Profile Banner */
+.profile-banner {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid var(--gray-200);
+  margin-bottom: 1.5rem;
+}
+
+.banner-bg {
+  height: 8rem;
+  background-color: var(--amrutam-light-green);
+}
+
+.banner-content {
+  padding: 0 2rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: -3rem;
+  flex-wrap: wrap;
+}
+
+.profile-info {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.5rem;
+}
+
+.profile-img {
+  width: 8rem; 
+  height: 8rem;
+  border-radius: 50%;
+  border: 4px solid white;
+  background: white;
+  object-fit: cover;
+}
+
+.profile-info h2 { 
+  display: flex; 
+  align-items: center; 
+  gap: 0.5rem; 
+  font-size: 1.5rem; 
+}
+
+.badge-icon { 
+  color: #3b82f6; 
+  width: 1.25rem; 
+}
+
+.specialty { 
+  color: var(--amrutam-green); 
+  font-weight: 500; 
+  margin: 0.25rem 0; 
+}
+
+.star-icon { 
+  color: #facc15; 
+  width: 1rem; 
+  margin-left: 0.25rem; 
+}
+
+.stats-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat span {
+  display: block;
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+
+.stat strong {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.btn-book-nav {
+  background: var(--amrutam-green);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-book-nav:hover {
+  background: #2c4c2d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Profile Grid */
+.profile-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.left-column {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  max-width: 1000px;
-  margin: 0 auto;
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Section Cards */
+.section-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.section-header h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.btn-follow {
+  background: var(--amrutam-green);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-follow:hover {
+  background: #2c4c2d;
+}
+
+.about-text {
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.languages {
+  margin-top: 1rem;
+}
+
+.languages strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+}
+
+.lang-tag {
+  display: inline-block;
+  background: var(--amrutam-light-green);
+  color: var(--amrutam-green);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.specialize-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.spec-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: var(--amrutam-light-green);
+  border-radius: 8px;
+}
+
+.spec-icon {
+  color: var(--amrutam-green);
+  flex-shrink: 0;
+}
+
+/* Booking Widget */
+.booking-widget {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 20px;
+}
+
+.fee-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: var(--amrutam-light-green);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.fee-amount {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--amrutam-green);
+}
+
+.booking-widget h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mode-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.mode-box {
+  text-align: center;
+  padding: 1rem 0.5rem;
+  border: 2px solid var(--gray-200);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mode-box:hover {
+  border-color: var(--amrutam-green);
+}
+
+.mode-box.active {
+  border-color: var(--amrutam-green);
+  background: var(--amrutam-light-green);
+}
+
+.mode-box strong {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 0.25rem;
+}
+
+.mode-box small {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.calendar-icon {
+  color: var(--amrutam-green);
+}
+
+.dates-slider {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.dates-slider button {
+  background: var(--gray-200);
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dates-slider button:hover {
+  background: var(--amrutam-green);
+  color: white;
+}
+
+.date-box {
+  flex: 1;
+  text-align: center;
+  padding: 0.75rem 0.5rem;
+  border: 2px solid var(--gray-200);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.date-box:hover {
+  border-color: var(--amrutam-green);
+}
+
+.date-box.active {
+  border-color: var(--amrutam-green);
+  background: var(--amrutam-light-green);
+}
+
+.date-box strong {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 0.25rem;
+}
+
+.date-box small {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.time-slots h5 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 0.75rem;
+}
+
+.slots-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.slot {
+  text-align: center;
+  padding: 0.5rem;
+  border: 1px solid var(--gray-200);
+  border-radius: 6px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.slot:hover {
+  border-color: var(--amrutam-green);
+}
+
+.slot.active {
+  background: var(--amrutam-green);
+  color: white;
+  border-color: var(--amrutam-green);
+}
+
+.btn-book-large {
+  width: 100%;
+  background: var(--amrutam-green);
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-book-large:hover {
+  background: #2c4c2d;
+  transform: translateY(-1px);
+}
+
+/* Clinic Information */
+.clinic-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: var(--amrutam-light-green);
+  border-radius: 8px;
+}
+
+.info-icon {
+  color: var(--amrutam-green);
+  flex-shrink: 0;
+}
+
+.info-item span {
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+/* Consultation Fees */
+.consultation-fees {
+  margin-top: 20px;
+}
+
+.consultation-fees h5 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+.fee-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fee-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: var(--amrutam-light-green);
+  border-radius: 8px;
+  border: 1px solid var(--gray-200);
+}
+
+.fee-card svg {
+  color: var(--amrutam-green);
+  flex-shrink: 0;
+}
+
+.fee-card span {
+  flex: 1;
+  font-size: 14px;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.fee-card strong {
+  color: var(--amrutam-green);
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .banner-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .stats-actions {
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .mode-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .slots-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /* Banner Styles */
