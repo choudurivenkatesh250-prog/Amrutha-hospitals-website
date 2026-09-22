@@ -1,154 +1,20 @@
-import React from 'react';
+import { createElement, useState } from 'react';
+import { Ambulance, ArrowRight, Award, CalendarDays, Check, ChevronDown, Clock3, HeartPulse, MessageCircle, Search, ShieldCheck, Stethoscope, UsersRound } from 'lucide-react';
 import './index.css';
 
-function Home() {
-  return (
-    <div className="home-container">
-      {/* Welcome Banner */}
-      <div className="welcome-banner">
-        <div className="welcome-content">
-          <h1 className="welcome-title">Welcome to Amrutam Hospital</h1>
-          <p className="welcome-subtitle">
-            Providing quality healthcare services with compassion and excellence since 1995
-          </p>
-          <div className="welcome-features">
-            <div className="welcome-feature">
-              <span className="feature-icon">🏥</span>
-              <span className="feature-text">24/7 Emergency Care</span>
-            </div>
-            <div className="welcome-feature">
-              <span className="feature-icon">👨‍⚕️</span>
-              <span className="feature-text">200+ Expert Doctors</span>
-            </div>
-            <div className="welcome-feature">
-              <span className="feature-icon">💬</span>
-              <span className="feature-text">Online Consultations</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Main Content Grid */}
-      <div className="main-content">
-        {/* Statistics Section */}
-        <div className="content-section stats-section">
-          <h2 className="section-title">Our Impact in Numbers</h2>
-          <div className="stats-grid">
-            <div className="stat-item">
-              <div className="stat-number">50,000+</div>
-              <div className="stat-label">Happy Patients</div>
-              <div className="stat-description">Trusted by thousands of families</div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-number">200+</div>
-              <div className="stat-label">Expert Doctors</div>
-              <div className="stat-description">Across 25+ specializations</div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-number">25+</div>
-              <div className="stat-label">Specializations</div>
-              <div className="stat-description">Comprehensive medical services</div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-number">98%</div>
-              <div className="stat-label">Success Rate</div>
-              <div className="stat-description">Patient satisfaction guaranteed</div>
-            </div>
-          </div>
-        </div>
-
-        {/* Services Section */}
-        <div className="content-section services-section">
-          <h2 className="section-title">Our Medical Services</h2>
-          <div className="services-grid">
-            <div className="service-item">
-              <div className="service-icon">🏥</div>
-              <h3 className="service-title">Emergency Care</h3>
-              <p className="service-description">
-                24/7 emergency services with dedicated medical team ready for any critical situation
-              </p>
-              <ul className="service-points">
-                <li>Immediate medical attention</li>
-                <li>Critical care specialists</li>
-                <li>Advanced life support systems</li>
-              </ul>
-            </div>
-            <div className="service-item">
-              <div className="service-icon">👨‍⚕️</div>
-              <h3 className="service-title">Expert Doctors</h3>
-              <p className="service-description">
-                200+ board-certified physicians across all major medical specializations
-              </p>
-              <ul className="service-points">
-                <li>Experienced medical professionals</li>
-                <li>Multiple specializations available</li>
-                <li>Continuous medical education</li>
-              </ul>
-            </div>
-            <div className="service-item">
-              <div className="service-icon">💬</div>
-              <h3 className="service-title">Online Consultations</h3>
-              <p className="service-description">
-                Connect with doctors through video or chat from the comfort of your home
-              </p>
-              <ul className="service-points">
-                <li>Video consultations available</li>
-                <li>Chat with medical experts</li>
-                <li>Flexible appointment scheduling</li>
-              </ul>
-            </div>
-            <div className="service-item">
-              <div className="service-icon">🏥</div>
-              <h3 className="service-title">Advanced Facilities</h3>
-              <p className="service-description">
-                State-of-the-art medical equipment and modern infrastructure for accurate diagnosis
-              </p>
-              <ul className="service-points">
-                <li>Modern diagnostic equipment</li>
-                <li>Digital health records</li>
-                <li>Clean and comfortable environment</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        {/* Why Choose Us Section */}
-        <div className="content-section choose-section">
-          <h2 className="section-title">Why Choose Amrutam Hospital?</h2>
-          <div className="choose-grid">
-            <div className="choose-item">
-              <div className="choose-icon">🏆</div>
-              <h3 className="choose-title">28 Years of Excellence</h3>
-              <p className="choose-description">
-                Serving the community with commitment to quality healthcare and patient satisfaction since 1995
-              </p>
-            </div>
-            <div className="choose-item">
-              <div className="choose-icon">💰</div>
-              <h3 className="choose-title">Affordable Healthcare</h3>
-              <p className="choose-description">
-                Transparent pricing with multiple payment options and insurance coverage for maximum accessibility
-              </p>
-            </div>
-            <div className="choose-item">
-              <div className="choose-icon">❤️</div>
-              <h3 className="choose-title">Patient-Centered Care</h3>
-              <p className="choose-description">
-                Personalized treatment plans with focus on patient comfort, privacy, and recovery
-              </p>
-            </div>
-            <div className="choose-item">
-              <div className="choose-icon">🌟</div>
-              <h3 className="choose-title">Quality & Safety</h3>
-              <p className="choose-description">
-                Internationally recognized medical standards with strict safety protocols and quality control
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+const specialties = [['Cardiology', 'Heart care led by experienced cardiac specialists'], ['Orthopaedics', 'Advanced bone, joint and spine care'], ['Women & Child', 'Care through every stage of life'], ['Neurology', 'Comprehensive brain and nervous system care'], ['Gastroenterology', 'Digestive health diagnosis and treatment'], ['General Medicine', 'Everyday health and preventive care']];
+const faqs = [['How do I book an appointment?', 'Choose a doctor, submit your request, and our care team will confirm a convenient time.'], ['Do you accept cashless insurance?', 'Yes. Our insurance desk supports major cashless providers and guides you through pre-authorisation.'], ['What should I bring for my first visit?', 'Please bring a photo ID, insurance card, previous medical reports and your current prescriptions.']];
+export default function Home({ onNavigate }) {
+  const [submitted, setSubmitted] = useState(false); const [openFaq, setOpenFaq] = useState(0);
+  const submit = (event) => { event.preventDefault(); setSubmitted(true); event.currentTarget.reset(); };
+  return <div className="hospital-home">
+    <section className="home-hero" aria-labelledby="hero-title"><div className="hero-copy"><p className="eyebrow"><ShieldCheck size={16}/> Trusted care. Every day.</p><h1 id="hero-title">Healthcare that feels <em>personal.</em></h1><p className="hero-lede">Clinical excellence, compassionate specialists and seamless care for every member of your family.</p><div className="hero-actions"><button className="primary-button" onClick={() => document.getElementById('appointment').scrollIntoView({ behavior: 'smooth' })}>Book an appointment <ArrowRight size={18}/></button><a className="emergency-button" href="tel:+919876543210"><Ambulance size={18}/> Emergency: Call now</a></div><div className="trust-row"><span><Check/> NABH-aligned care</span><span><Check/> 24/7 emergency</span><span><Check/> Cashless insurance</span></div></div><div className="hero-panel"><div className="availability"><span className="pulse"/> Doctors available today</div><h2>Care when you need it</h2><p>Consult leading specialists in clinic or online.</p><div className="hero-stat-grid"><div><strong>50k+</strong><span>Patients cared for</span></div><div><strong>200+</strong><span>Expert doctors</span></div><div><strong>25+</strong><span>Specialities</span></div><div><strong>24/7</strong><span>Emergency care</span></div></div></div></section>
+    <section className="quick-care" aria-label="Quick access"><button onClick={() => onNavigate('find-doctors')}><Search/><span>Find a doctor<small>Choose the right expert</small></span><ArrowRight/></button><a href="tel:+919876543210"><Ambulance/><span>Emergency care<small>Immediate assistance</small></span><ArrowRight/></a><button onClick={() => document.getElementById('appointment').scrollIntoView({ behavior: 'smooth' })}><CalendarDays/><span>Book a visit<small>Request an appointment</small></span><ArrowRight/></button></section>
+    <section className="section-block"><div className="section-heading"><p className="eyebrow">WHY AMRUTAM</p><h2>Expert care, thoughtfully delivered.</h2><p>From first consultation to recovery, our teams make every step clear, safe and reassuring.</p></div><div className="benefit-grid">{[[HeartPulse,'Patient-first care','A coordinated care plan built around your health goals.'],[Award,'Clinical excellence','Experienced specialists supported by modern diagnostics.'],[Clock3,'Timely access','Convenient appointments and responsive care, seven days a week.'],[ShieldCheck,'Transparent support','Clear guidance on treatment, estimates and insurance.']].map(([BenefitIcon,title,text])=><article className="benefit-card" key={title}>{createElement(BenefitIcon)}<h3>{title}</h3><p>{text}</p></article>)}</div></section>
+    <section className="speciality-section section-block"><div className="section-heading inline-heading"><div><p className="eyebrow">OUR SPECIALITIES</p><h2>Specialised care for every need.</h2></div><button className="link-button" onClick={() => onNavigate('find-doctors')}>Explore doctors <ArrowRight size={17}/></button></div><div className="speciality-grid">{specialties.map(([title,text])=><article className="speciality-card" key={title}><Stethoscope/><h3>{title}</h3><p>{text}</p><button onClick={() => onNavigate('find-doctors')} aria-label={`Find a ${title} doctor`}>Find a specialist <ArrowRight size={15}/></button></article>)}</div></section>
+    <section id="appointment" className="appointment-section"><div><p className="eyebrow">APPOINTMENT REQUEST</p><h2>Let’s find the right care for you.</h2><p>Share your details and our patient-care team will call you to confirm your visit.</p><div className="appointment-points"><span><Check/> Same-day slots where available</span><span><Check/> Assistance with insurance and reports</span></div></div><form onSubmit={submit}><label>Full name<input name="name" required minLength="2" placeholder="Your full name" /></label><label>Mobile number<input name="phone" required inputMode="tel" pattern="[0-9+ -]{8,}" placeholder="Your phone number" /></label><label>Preferred speciality<select name="speciality" defaultValue=""><option value="" disabled>Select a speciality</option>{specialties.map(([title])=><option key={title}>{title}</option>)}</select></label><button className="primary-button" type="submit">Request appointment <ArrowRight size={18}/></button>{submitted && <p className="form-success" role="status">Thank you. Our care team will contact you shortly.</p>}</form></section>
+    <section className="section-block"><div className="section-heading"><p className="eyebrow">PATIENT STORIES</p><h2>Trusted by families, every day.</h2></div><div className="testimonial-grid"><blockquote>“The team explained every step with such calm and clarity. I felt genuinely cared for.”<footer>— Meera S., Cardiology patient</footer></blockquote><blockquote>“From admission to follow-up, everything was seamless. The nursing team was exceptional.”<footer>— Rajesh K., Orthopaedics patient</footer></blockquote><aside className="insurance-card"><UsersRound/><h3>Insurance support</h3><p>We work with leading insurers for a smoother cashless experience.</p><button>View insurance information <ArrowRight size={15}/></button></aside></div></section>
+    <section className="faq-section section-block"><div className="section-heading"><p className="eyebrow">HELP CENTRE</p><h2>Questions, answered.</h2></div>{faqs.map(([question,answer], i)=><div className="faq-item" key={question}><button aria-expanded={openFaq===i} onClick={()=>setOpenFaq(openFaq===i?-1:i)}>{question}<ChevronDown className={openFaq===i?'rotate':''}/></button>{openFaq===i&&<p>{answer}</p>}</div>)}</section>
+    <a className="whatsapp-float" href="https://wa.me/919876543210" target="_blank" rel="noreferrer" aria-label="Chat with Amrutam Hospital on WhatsApp"><MessageCircle/></a><a className="mobile-book" href="#appointment">Book appointment</a>
+  </div>;
 }
-
-export default Home;
